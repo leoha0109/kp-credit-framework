@@ -797,6 +797,309 @@ ul.editorial li::before {
   color: var(--gold);
 }
 
+/* ====================================================
+   NARRATIVE — Editorial Analysis Block
+   ==================================================== */
+.narrative {
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--ink);
+  margin: 1.5rem 0;
+}
+
+.narrative p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+.narrative p.lede::first-letter {
+  font-family: var(--display);
+  font-size: 3rem;
+  font-weight: 600;
+  float: left;
+  line-height: 0.9;
+  margin: 0.15rem 0.5rem 0 0;
+  color: var(--gold-dark);
+}
+
+.narrative blockquote {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink-light);
+  border-left: 3px solid var(--gold);
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin: 1.5rem 0;
+  line-height: 1.5;
+}
+
+.narrative blockquote cite {
+  display: block;
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+/* Pull-quote (for emphasized passages) */
+.pullquote {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--ink);
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 1.2rem 0;
+  margin: 2rem 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.pullquote em {
+  color: var(--gold-dark);
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ====================================================
+   MONTH CARD — Calendar Detail
+   ==================================================== */
+.month-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.month-card {
+  background: var(--paper-pure);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--gold);
+  padding: 1.25rem 1.5rem;
+}
+
+.month-card.priority {
+  border-left-color: var(--crimson);
+  background: linear-gradient(90deg, rgba(184, 149, 74, 0.04) 0%, var(--paper-pure) 30%);
+}
+
+.month-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--paper-dark);
+}
+
+.month-card-label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  min-width: 60px;
+}
+
+.month-card-title {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+.month-card-ref {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-left: auto;
+  letter-spacing: 0.05em;
+}
+
+.month-card-body {
+  font-family: var(--body);
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--ink-light);
+}
+
+.month-card-body p {
+  margin-bottom: 0.6rem;
+}
+
+.month-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ====================================================
+   SAMPLE PARAGRAPH BLOCK
+   ==================================================== */
+.sample-paragraph {
+  background: var(--paper-pure);
+  border: 1px solid var(--rule);
+  padding: 1.5rem 1.75rem;
+  margin: 1.25rem 0;
+  position: relative;
+}
+
+.sample-paragraph::before {
+  content: '예시';
+  position: absolute;
+  top: -10px;
+  left: 1.5rem;
+  background: var(--ink);
+  color: var(--gold);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  padding: 0.2rem 0.6rem;
+  text-transform: uppercase;
+}
+
+.sample-paragraph-title {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+.sample-paragraph-body {
+  font-family: var(--body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.sample-paragraph-body .step-marker {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gold-dark);
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.sample-paragraph-body p {
+  margin-bottom: 0.65rem;
+}
+
+/* ====================================================
+   PROCEDURE BLOCK — Quarterly Review Detailed Step
+   ==================================================== */
+.procedure {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  padding: 1.25rem 0;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.procedure:last-child { border-bottom: none; }
+
+.procedure-num {
+  font-family: var(--display);
+  font-size: 3.5rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--gold);
+  line-height: 0.9;
+  text-align: center;
+}
+
+.procedure-content h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.procedure-content .source-list {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.6rem;
+  letter-spacing: 0.03em;
+}
+
+.procedure-content .source-list strong {
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+/* ====================================================
+   SLIDE PREVIEW — Forum PPT 12-slide skeleton
+   ==================================================== */
+.slide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.slide-preview {
+  background: var(--paper-pure);
+  border: 1px solid var(--rule);
+  padding: 1rem 1.25rem;
+  position: relative;
+}
+
+.slide-preview-num {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.9rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold-dark);
+  letter-spacing: 0.05em;
+}
+
+.slide-preview-title {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  padding-right: 2rem;
+}
+
+.slide-preview-angle {
+  font-family: var(--body);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink-light);
+  margin-bottom: 0.55rem;
+}
+
+.slide-preview-meta {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  padding-top: 0.5rem;
+  border-top: 1px dotted var(--paper-dark);
+}
+
+.slide-preview-meta strong {
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.slide-preview.featured {
+  background: linear-gradient(90deg, rgba(184, 149, 74, 0.06) 0%, var(--paper-pure) 50%);
+  border-left: 3px solid var(--gold);
+}
+
 </style>
 </head>
 <body>
@@ -807,7 +1110,7 @@ ul.editorial li::before {
 <header class="masthead">
   <div class="masthead-top">
     <span>VOL. III ‧ NO. VI ‧ 2026년 6월</span>
-    <span>하나증권 ‧ Global Asset Research</span>
+    <span>Global Asset Research</span>
     <span>분석 활용 전용</span>
   </div>
   <h1 class="masthead-title">Korean Paper <em>신용 분석 프레임워크</em></h1>
@@ -1778,68 +2081,369 @@ ul.editorial li::before {
      ============================================ -->
 <main class="tab-content" id="tab-workflow">
   <div class="section-eyebrow">Section VII</div>
-  <h2 class="section-title">Framework → KP 월간 리포트</h2>
+  <h2 class="section-title">분석에서 월간 리포트까지</h2>
   <p class="section-deck">
-    옵션 X (v3.5 § 18)는 ★ analytical framework을 ★ KP 월간 리포트의
-    4-part 운영 매뉴얼로 변환. ★ 이하는 working template + 페르소나 선정 매트릭스 +
-    Quarterly review checklist.
+    프레임워크는 분석 결과 그 자체로 가치가 있는 것이 아니라,
+    KP 월간 리포트 · 토픽 리포트 · 반기 포럼 PPT라는
+    실제 산출물로 변환될 때 비로소 working tool이 된다.
+    옵션 X (v3.5 § 18)는 그 변환 절차의 표준화 — 작성 cadence,
+    문단 구조, 페르소나 운영 룰, 분기말 점검 procedure까지 — 를 다룬다.
   </p>
 
-  <h3 class="subsection"><span class="num">VII‧A</span>월간 리포트 — 제목 + Page 1 구조</h3>
+  <!-- ============================================
+       VII-A. 12개월 캘린더
+       ============================================ -->
+  <h3 class="subsection"><span class="num">VII‧A</span>월간 리포트 — 12개월 작성 캘린더</h3>
+  <div class="narrative">
+    <p class="lede">
+      KP 월간 리포트의 제목 공식은 <em class="gold">"KP: [월], [당월 점검 키워드]"</em>로 고정되어 있다.
+      형식이 고정되면 분석가의 집중은 자연스럽게 <em>키워드 선정</em>으로 이동한다 —
+      그 달의 KP 시장에서 가장 분석 가치가 높은 단일 주제는 무엇인가.
+      이하 12개월 캘린더는 2026년에 한정한 권장 키워드 매핑으로,
+      catalyst의 예상 발생 시점 · framework 내 참조 위치 · 분석 angle을 함께 제시한다.
+    </p>
+    <p>
+      캘린더의 가치는 두 가지다. 첫째, 매월 초 키워드 선정에 소요되는 시간을 줄인다.
+      둘째, 어떤 달의 리포트가 그 다음 달 · 다음 분기의 분석으로 어떻게 연결되는지의
+      서사 구조를 사전에 명확히 한다. KP 시장 분석은 단발성 이벤트의 나열이 아니라
+      <em class="gold">연속된 trajectory</em>이며, 따라서 12개월 단위로 묶어서 보는 것이 적절하다.
+    </p>
+  </div>
 
-  <table class="data">
-    <caption>월별 추천 제목 — 2026년 12개월 캘린더</caption>
-    <thead>
-      <tr>
-        <th>월</th>
-        <th>추천 제목 키워드</th>
-        <th>Framework 참조</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>4월</td><td>POSCO 강등 충격 + Sub-track 차등</td><td>§ 8-D + § 13-C + Stage 3-F</td></tr>
-      <tr><td>5월</td><td>Samsung HBM4 양산 진행 + SK Hynix BBB+</td><td>§ 7-A #1 + § 13-D + Stage 3-E</td></tr>
-      <tr style="background: rgba(184, 149, 74, 0.06);"><td><strong>6월</strong></td><td><strong>Samsung Moody's Stable revision 시점</strong></td><td><strong>§ 13-D Para 50 + Stage 5-D3 시나리오 A (50%)</strong></td></tr>
-      <tr><td>7-8월</td><td>한국 KP BBB tier 동질화 본격화</td><td>§ 7-E + § 13-C + § 17-D 건설</td></tr>
-      <tr><td>9월</td><td>POSCO International outlook + 현대 그룹 안정</td><td>§ 17-C POSCO 4-subsidiary</td></tr>
-      <tr style="background: rgba(184, 149, 74, 0.06);"><td><strong>10월</strong></td><td><strong>Moody's POSCO 동조 강등 monitor</strong></td><td><strong>Stage 5-D2 § 3 시나리오 2 (65%)</strong></td></tr>
-      <tr><td>11-12월</td><td>연말 outlook 재점검 + 2027 전망</td><td>§ 13-E 5-축 framework</td></tr>
-    </tbody>
-  </table>
+  <div class="month-grid">
+    <div class="month-card">
+      <div class="month-card-header">
+        <span class="month-card-label">4월</span>
+        <span class="month-card-title">POSCO 강등 충격과 Sub-track 차등 영향</span>
+        <span class="month-card-ref">§ 8-D · § 13-C · Stage 3-F</span>
+      </div>
+      <div class="month-card-body">
+        <p>
+          3월 17일 S&P가 POSCO Holdings + 본체를 A-에서 BBB+로 강등한 직후의 첫 월간 리포트.
+          2025년 3월 Negative outlook 부여 직후 정확히 12개월 후 발생한 사건으로,
+          S&P 6-8개월 leading 패턴의 산업별 확장 가능성을 입증한 사례에 해당한다.
+        </p>
+        <p>
+          분석 angle은 Sub-track 차등에 있다. POSCO Holdings · 본체 (③ Captive Hybrid)는
+          강등되었으나, POSCO International (① 그룹 의존)은 BBB+ Negative 그대로 유지되었고
+          현대제철 (① 그룹 의존, Hyundai Group)은 BBB 안정을 유지하였다.
+          같은 산업 내에서도 sub-track 분류에 따라 강등 방향이 정확히 갈리는
+          framework의 결정적 입증 사례로 보는 것이 적절하다.
+        </p>
+      </div>
+    </div>
 
-  <h3 class="subsection"><span class="num">VII‧B</span>4-Step Paragraph Flow</h3>
-  <p>
-    사용자의 working convention: ★ 모든 analytical 단락은 ★ 4-step 구조 사용.
-    Framework은 ★ Step ② + ③의 정량 substance 공급.
-  </p>
-  <div class="two-col">
-    <div class="callout">
-      <div class="callout-label">Step ① ‧ 현황 진술</div>
-      <p>★ 발생 사실. ★ 정량 수치 1차 노출 (★ bp / 배수 / 분위수). ★ 시점 명시.</p>
+    <div class="month-card">
+      <div class="month-card-header">
+        <span class="month-card-label">5월</span>
+        <span class="month-card-title">Samsung HBM4 양산과 SK Hynix BBB+ Upgrade</span>
+        <span class="month-card-ref">§ 7-A #1 · § 13-D · Stage 3-E</span>
+      </div>
+      <div class="month-card-body">
+        <p>
+          2월 13일 Samsung의 HBM4 industry-first commercial 양산 발표와
+          2월 5일 SK Hynix의 S&P BBB → BBB+ upgrade가 누적된 시점의 분석.
+          반도체 두 발행자가 같은 cycle (HBM)에 있으면서도 등급 변동의 방향이
+          정반대 — 한쪽은 outlook negative 유지, 다른 한쪽은 단계적 upgrade —
+          를 보이는 현상의 매커니즘 분석이 핵심이다.
+        </p>
+        <p>
+          분석 도구는 § 8-A의 SK 내부 분기 framework과 Para 50 dynamic 5-stage framework이다.
+          전자는 같은 그룹 내 자체 펀더멘털 (②) vs 그룹 의존 (①)의 차이를 다루고,
+          후자는 sovereign cap의 split 처리 매커니즘을 다룬다.
+          두 framework은 reciprocal하며, 함께 사용할 때 결정적이다.
+        </p>
+      </div>
     </div>
-    <div class="callout">
-      <div class="callout-label">Step ② ‧ 데이터 뒷받침</div>
-      <p>★ Stage 3 라이브러리 정량 인용. ★ 3-axis 비교 (★ Regional × Internal tier × Period) — ★ 최소 1축 활용.</p>
+
+    <div class="month-card priority">
+      <div class="month-card-header">
+        <span class="month-card-label">6월</span>
+        <span class="month-card-title">Samsung Moody's Stable Revision 시점</span>
+        <span class="month-card-ref">§ 13-D · Stage 5-D3 시나리오 A · 확률 50%</span>
+      </div>
+      <div class="month-card-body">
+        <p>
+          2025년 1월 24일 Moody's가 Samsung Aa2 Negative outlook을 부여한 이후
+          17개월이 경과한 시점. framework의 base case는 영업이익률 14.5% 회복이
+          확인될 경우 Moody's Stable revision이 6월에서 12월 사이에 발생하는 것이다.
+          본 월의 리포트는 그 발생 여부 자체가 가장 중요한 forward catalyst가 된다.
+        </p>
+        <p>
+          만약 Stable revision이 6월 중 발생할 경우, 본 리포트는
+          Para 50 5-stage framework의 stage 4 (Maintained, split align)
+          진입을 정량적으로 확인하는 분석이 되어야 한다.
+          미발생 시에는 6-12월 잔여 window 내 발생 확률의 분기점 분석이 적절하다.
+          어느 쪽이든 다만 본 시점의 결론이 가장 결정적인 forward signal이 된다.
+        </p>
+      </div>
     </div>
-    <div class="callout">
-      <div class="callout-label">Step ③ ‧ 해석/판단</div>
-      <p>★ <em class="gold">"다만"</em> 또는 <em class="gold">"그러나"</em> qualifier 필수. Sub-track 분류 명시. 매커니즘 설명.</p>
+
+    <div class="month-card">
+      <div class="month-card-header">
+        <span class="month-card-label">7-8월</span>
+        <span class="month-card-title">한국 KP BBB Tier 동질화 본격화</span>
+        <span class="month-card-ref">§ 7-E · § 13-C · § 17-D 건설</span>
+      </div>
+      <div class="month-card-body">
+        <p>
+          POSCO 강등 후 BBB tier에 누적된 발행자 — POSCO Holdings · 본체 · International ·
+          LG Chem · LGES · 롯데화학 · 현대제철 — 의 spread 분포가
+          어떻게 재정렬되고 있는지를 종합 점검하는 시점.
+          기존에 A-/BBB+ tier에 분산되어 있던 시장이 BBB tier로 수렴하는 과정의
+          정량적 추적이 적절하다.
+        </p>
+        <p>
+          분석 도구는 § 7-E의 KP 4-tier 시장 구조 framework이다.
+          AA tier 11개 중 9개가 GRE 발행자라는 점, BBB tier 동질화로
+          상위 그룹과의 spread 차등이 어떻게 변화하는지의 추적이 가능하다.
+          건설 (Stage 3-G, KP 비중 1-2%)을 비롯하여 한국 KP 시장 비중이 작은
+          산업의 영향도 함께 포함하여 보는 것이 적절하다.
+        </p>
+      </div>
     </div>
-    <div class="callout">
-      <div class="callout-label">Step ④ ‧ 전망/대응</div>
-      <p>★ Sentence ending: <em class="gold">"…로 보는 것이 적절하다"</em>. ★ Default tone — 선별적 접근 + 상위 그룹 중심. Forward window 명시.</p>
+
+    <div class="month-card">
+      <div class="month-card-header">
+        <span class="month-card-label">9월</span>
+        <span class="month-card-title">POSCO International Outlook과 현대 그룹 안정성</span>
+        <span class="month-card-ref">§ 17-C POSCO 4-subsidiary</span>
+      </div>
+      <div class="month-card-body">
+        <p>
+          POSCO Holdings 강등 후 6개월이 경과한 시점에서 POSCO International의
+          BBB+ Negative outlook이 어떻게 진행되고 있는지의 점검.
+          본 시점이 중요한 이유는 ① 그룹 의존 자회사 (POSCO International)가
+          ③ Captive Hybrid 본체의 강등에 어떤 시차로 동조하는지의 정량적 매커니즘이
+          한국 KP 시장에서 처음으로 관측되는 사례이기 때문이다.
+        </p>
+        <p>
+          비교 axis로는 같은 ① 그룹 의존인 현대제철의 안정성 (Hyundai Motor Group GCP 안정)을
+          함께 분석한다. 같은 sub-track 분류이지만 모기업 GCP의 trajectory가 다르면
+          자회사의 등급 방향이 어떻게 갈리는지가 본 분석의 결정적 발견이 된다.
+        </p>
+      </div>
+    </div>
+
+    <div class="month-card priority">
+      <div class="month-card-header">
+        <span class="month-card-label">10월</span>
+        <span class="month-card-title">Moody's POSCO 동조 강등 Monitor</span>
+        <span class="month-card-ref">Stage 5-D2 § 3 시나리오 2 · 확률 65%</span>
+      </div>
+      <div class="month-card-body">
+        <p>
+          S&P 강등 후 약 7개월 시점. framework의 base case는 Moody's가
+          Baa1에서 Baa2로 1-notch 동조 강등을 2026년 Q3-Q4 사이에 진행하는 것이다.
+          확률 65%는 framework이 산정한 catalyst 매트릭스에서 두 번째로 높은 수치다.
+          본 리포트는 그 발생 여부의 확인 또는 잔여 window 진단을 다룬다.
+        </p>
+        <p>
+          분석 frame은 LG화학의 14개월 3-notch 강등 trajectory와의 비교가 적절하다.
+          LG화학은 Moody's만 A3 → Baa1 → Baa2를 14개월에 걸쳐 연속 강등했고,
+          POSCO Holdings는 S&P 단독 강등에 그칠지 또는 Moody's 동조로 확장될지의
+          분기점에 있다. 다만 동조 강등이 발생할 경우 양사의 trajectory shape이
+          유사해진다는 점에서 framework 입장에서는 정직한 case study가 추가되는 것이다.
+        </p>
+      </div>
+    </div>
+
+    <div class="month-card">
+      <div class="month-card-header">
+        <span class="month-card-label">11-12월</span>
+        <span class="month-card-title">연말 Outlook 재점검과 2027 전망</span>
+        <span class="month-card-ref">§ 13-E 5-축 framework</span>
+      </div>
+      <div class="month-card-body">
+        <p>
+          연간 retrospect의 시점. 6월 Samsung Stable revision, 10월 POSCO Moody's 동조 강등의
+          base case가 모두 발생했는지의 확인이 우선이다. 발생 시 framework의
+          forward-looking 정확도가 정량 입증되며, 미발생 시 forward window의
+          confidence interval 재설정이 필요하다.
+        </p>
+        <p>
+          2027 전망 frame은 5-축 framework이 적절하다 — 시간 · 자금 · 포지션 · 벤치마크 · 공간.
+          Stage 5 D-1/D-2/D-3 시뮬레이션에서 5-페르소나 사이에 합의에 도달한 축은
+          시간뿐이었으며, 나머지 4축에서는 비합의가 유지되었다. 본 비합의 자체가
+          forward-looking 분석의 가치이며, 2027 전망에서도 이 구조를 유지하는 것이 적절하다.
+        </p>
+      </div>
     </div>
   </div>
 
-  <h3 class="subsection"><span class="num">VII‧C</span>Topic × 페르소나 선정 매트릭스</h3>
-  <p>
-    6개 topic archetype, ★ 각각 5-round 페르소나 sequence로 매핑.
-    ★ Round 1은 ★ 항상 정반대 결론으로 anchor;
-    ★ Round 5는 ★ 항상 5인 전원을 ★ 5축 grid로 정리.
+  <!-- ============================================
+       VII-B. 4-Step Paragraph Flow with examples
+       ============================================ -->
+  <h3 class="subsection"><span class="num">VII‧B</span>4-Step Paragraph Flow — 작성 표준</h3>
+  <div class="narrative">
+    <p>
+      모든 분석 단락은 4단계 구조를 따른다 — 현황 진술, 데이터 뒷받침, 해석 및 판단, 전망 및 대응.
+      이 구조는 분석가의 글쓰기 자유를 제약하기 위한 것이 아니라, 반대로
+      분석가가 단락 구조에 대한 인지 부담을 줄이고 <em class="gold">실제 분석 내용 자체</em>에
+      집중할 수 있게 하기 위한 framework이다.
+    </p>
+    <p>
+      Step ③의 "다만 / 그러나" qualifier가 가장 결정적이다. 분석가의 직무는
+      한 방향의 결론을 강하게 주장하는 것이 아니라, 가능한 모든 방향을 열어두고
+      각 방향의 발생 조건을 명확히 하는 것이다. qualifier 없는 결론은
+      readers에게 over-confidence를 전달하며, 본 framework의 호환성과 어긋난다.
+    </p>
+  </div>
+
+  <div class="two-col">
+    <div class="callout">
+      <div class="callout-label">Step ① ‧ 현황 진술 (Situation)</div>
+      <p>발생 사실의 정확한 진술. 정량 수치 1차 노출 (bp · 배수 · 분위수 · z-score). 시점 명시 — "2026.03.17", "Q1 2026", "지난 5월".</p>
+    </div>
+    <div class="callout">
+      <div class="callout-label">Step ② ‧ 데이터 뒷받침 (Data)</div>
+      <p>Stage 3 산업 라이브러리의 정량 metric 인용. 3-axis 비교 (Regional × Internal Tier × Period) 중 최소 1개 활용. Stage 4 코드의 28-issuer DB에서 직접 추출 가능.</p>
+    </div>
+    <div class="callout">
+      <div class="callout-label">Step ③ ‧ 해석 및 판단 (Interpretation)</div>
+      <p><em class="gold">"다만"</em> 또는 <em class="gold">"그러나"</em> qualifier 필수 사용. Sub-track 분류 명시 (v3.5 § 2-E). 정량 metric의 해석 매커니즘 설명.</p>
+    </div>
+    <div class="callout">
+      <div class="callout-label">Step ④ ‧ 전망 및 대응 (Outlook)</div>
+      <p>문장 종결: <em class="gold">"…로 보는 것이 적절하다"</em>. Default tone — 선별적 접근, 상위 그룹 중심, 조건부 진입. Forward window 명시 ("향후 6-12개월").</p>
+    </div>
+  </div>
+
+  <h4>실제 작성 예시 — 3개 산업</h4>
+  <p style="font-style: italic; color: var(--muted); font-size: 0.92rem; margin-bottom: 1rem;">
+    이하 단락은 6월 KP 월간 리포트에 직접 삽입 가능한 4-step 적용 예시이다.
+    각 단락은 약 100-130 단어 분량으로, 실제 리포트의 sub-subhead 1개 단위에 해당한다.
+  </p>
+
+  <div class="sample-paragraph">
+    <div class="sample-paragraph-title">반도체 — Samsung HBM4 양산과 Moody's Stable Revision 가설</div>
+    <div class="sample-paragraph-body">
+      <p>
+        <span class="step-marker">현황</span>
+        Samsung Electronics가 2026년 2월 13일 HBM4 industry-first commercial 양산을 발표하였으며,
+        NVIDIA Vera Rubin 첫 supply 확정과 Google TPU 7세대 supply 계약 확보로
+        2026년 HBM 매출은 전년 대비 3배 증가가 예상된다.
+      </p>
+      <p>
+        <span class="step-marker">데이터</span>
+        Stage 3-E §3-B 검증값 기준 2026년 Q1 영업이익률은 14.5%로 회복 trajectory를 보이고 있으며 (2025년 11.8% 대비),
+        이는 Moody's가 Aa2 Stable revision 검토의 정량 기준으로 제시한 13-14% 구간에 충족된다.
+        Net cash는 KRW 95조로 2025년 85조 대비 12% 증가하였고, Fitch는 2026년 2월 26일 AA- Stable을 affirm하였다.
+      </p>
+      <p>
+        <span class="step-marker">해석</span>
+        다만, Moody's가 2025년 1월 24일 Aa2 Negative outlook으로 revision한 이후 17개월이 경과한
+        시점이며 Stable revision 발표는 아직 확인되지 않는다. 이는 Para 50 framework 5단계 중
+        4단계 "Maintained, split align" 진입 직전의 phase로, S&P/Moody's 1-notch outlook split의
+        영구화 trajectory가 진행 중인 것으로 해석할 수 있다.
+      </p>
+      <p>
+        <span class="step-marker">전망</span>
+        Samsung Moody's Stable revision의 발생 시점 (base case 2026.06-12, 확률 50%)이
+        향후 6-12개월의 가장 결정적 forward catalyst가 된다. Stable revision 발생 시 portfolio Samsung 비중을
+        12%에서 15%로 단계적 확대하는 것이 적절하다.
+      </p>
+    </div>
+  </div>
+
+  <div class="sample-paragraph">
+    <div class="sample-paragraph-title">철강 — POSCO 강등 직후 Sub-track 차등 분석</div>
+    <div class="sample-paragraph-body">
+      <p>
+        <span class="step-marker">현황</span>
+        S&P가 2026년 3월 17일 POSCO Holdings와 본체를 A-에서 BBB+로 1-notch 강등하였다.
+        강등 사유는 "Increased CapEx, Weak Conditions"이며, POSCO International (BBB+/Baa2 Negative)은
+        outlook negative를 유지한 채 등급은 변동되지 않았다.
+      </p>
+      <p>
+        <span class="step-marker">데이터</span>
+        2025년 3월 6일 S&P 3사 동시 Negative outlook 부여 이후 정확히 12개월 후 강등이 발생하였으며,
+        이는 framework의 S&P 6-8개월 leading 패턴이 본 case에서 12개월로 확장된 것이다.
+        Backtest 정확도는 98%로 8개 case 중 최고이다 (Stage 6 C3). 직접 트리거는 Q1 2026 Net Debt
+        KRW 12.9조에서 15.4조 (QoQ +19%)와 Adjusted Debt/EBITDA 1.5배 한계 초과의 지속이었다.
+      </p>
+      <p>
+        <span class="step-marker">해석</span>
+        다만, Moody's는 Baa1 Stable을 유지하여 1-notch + outlook split이 영구화되었다.
+        Sub-track 분류 framework이 정확히 작동하여 ③ Captive Hybrid (Holdings + 본체)는
+        통합 강등, ① 그룹 의존 (International)은 동조하지 않은 점은 framework의 결정적 입증이다.
+        Moody's 동조 강등 (Baa2 진입)의 확률은 65%로 산정되며 발생 시점은 2026 Q3-Q4가 적절한 window이다.
+      </p>
+      <p>
+        <span class="step-marker">전망</span>
+        Sub-track 차등에 따라 POSCO International overweight + Holdings/본체 underweight의
+        포지셔닝이 적절하다. Moody's 동조 강등 발생 시 spread widening은 추가 30-50bp가 예상되며,
+        다만 base case 확률 65%는 이미 시장 price-in이 진행되고 있는 것으로 보는 것이 적절하다.
+      </p>
+    </div>
+  </div>
+
+  <div class="sample-paragraph">
+    <div class="sample-paragraph-title">금융 — 시중은행 KDB/시중은행 Spread 차등의 안정성</div>
+    <div class="sample-paragraph-body">
+      <p>
+        <span class="step-marker">현황</span>
+        한국 sovereign이 AA Stable / Aa2 Stable로 유지되는 가운데
+        KDB · KEXIM의 SSA-style spread와 4대 시중은행 (KB · 신한 · 하나 + 지주 3사) spread의
+        차등이 2025년 대비 안정적으로 유지되고 있다.
+      </p>
+      <p>
+        <span class="step-marker">데이터</span>
+        Stage 5-D1 시뮬레이션 기준 sov 강등 가설 시 28-issuer 중 직접 동조 영향 발행자는
+        GRE Tier 1 (7개) + 시중은행 (6개)로 13개이며, sov 강등이 발생할 경우 K-ICS 위험계수는
+        GRE Aa2에서 Aa3로 변동 시 12%에서 14%로, 시중은행 Aa3에서 A1로 변동 시 14%에서 18%로 상승한다.
+        한편 sovereign 안정이 유지되는 base case에서는 양 그룹 spread가 모두 stable 유지된다.
+      </p>
+      <p>
+        <span class="step-marker">해석</span>
+        다만, BCA (시중은행 a3) 자체는 sov 강등 시 직접 영향을 받지 않으며,
+        Government support notch (+3 → +2 attenuation)의 매커니즘만 적용된다.
+        이는 framework의 § 13-B Government support attenuation 매커니즘으로 분석할 수 있다.
+        본 시점 sov 강등 확률은 0%로 산정되어 stress test 목적 분석의 영역에 머무른다.
+      </p>
+      <p>
+        <span class="step-marker">전망</span>
+        K-ICS frame 기준 KDB Aa2와 시중은행 Aa3 익스포저는 향후 6-12개월 monitor를 유지하되,
+        sov 안정 유지가 base case이므로 상위 그룹과 우량 시중은행 중심의 선별적 접근이 적절하다.
+      </p>
+    </div>
+  </div>
+
+  <!-- ============================================
+       VII-C. Persona Matrix with operational depth
+       ============================================ -->
+  <h3 class="subsection"><span class="num">VII‧C</span>5-페르소나 시뮬레이션 — 운영 매뉴얼</h3>
+  <div class="narrative">
+    <p>
+      페르소나 시뮬레이션은 분석가가 단일 입장에서 분석할 때 발생하는
+      blind spot을 사전에 검출하기 위한 도구이다.
+      5인 페르소나는 한국 KP 시장의 buy-side · sell-side · primary · 발행사 · 은행
+      트레저리를 모두 포함하며, 각 페르소나는 고유한 frame과 risk variable을 보유한다.
+      서로 다른 frame에서 도출되는 결론의 차이 자체가 분석의 가치다.
+    </p>
+    <p>
+      운영의 핵심은 <em class="gold">Round 1의 anti-anchor pair</em>다. Round 1은 항상
+      박이사 (K-ICS · 만기보유 frame)와 은실장 (LCR · 30일 frame)을 같은 사실에 적용시켜
+      정반대의 결론을 도출시키는 구조이며, 이로써 2개 buy-side 페르소나의 voice 수렴을 차단한다.
+      Round 5의 5-축 매트릭스 (시간 · 자금 · 포지션 · 벤치마크 · 공간)는 최종 정리 단계이며,
+      이 단계에서 어느 축에서 합의에 도달했는지의 확인이 시뮬레이션의 가치 평가 기준이다.
+    </p>
+    <blockquote>
+      D-1, D-2, D-3 세 시나리오 모두에서 5인이 합의에 도달한 axis는 시간뿐이었다.
+      자금 · 벤치마크 · 공간 3개 축의 비합의가 유지된다는 사실 자체가
+      해당 시나리오의 분석 가치를 입증한다.
+      <cite>STAGE 5 시뮬레이션 종합 결론 — v3.5 § 13-E</cite>
+    </blockquote>
+  </div>
+
+  <h4>Topic × 페르소나 선정 매트릭스</h4>
+  <p style="font-style: italic; color: var(--muted); font-size: 0.92rem; margin-bottom: 1rem;">
+    Topic의 본질에 따라 Round별 주연/조연이 다르게 배정된다.
+    주연은 토픽 본질에 대한 가장 깊은 engagement를 담당하며, 조연은 counter-argument를 공급한다.
   </p>
 
   <table class="data">
-    <caption>Topic별 페르소나 선정 — v3.5 § 18-G</caption>
+    <caption>Topic별 페르소나 선정 — 6개 archetype (v3.5 § 18-G)</caption>
     <thead>
       <tr>
         <th>Topic 유형</th>
@@ -1860,7 +2464,7 @@ ul.editorial li::before {
         <td>5인 전원</td>
       </tr>
       <tr>
-        <td>Issuer downgrade (D-2)</td>
+        <td>발행자 강등 (D-2)</td>
         <td>박이사 × 은실장</td>
         <td>Daniel + 정팀장</td>
         <td>김매니저 + 박이사</td>
@@ -1868,7 +2472,7 @@ ul.editorial li::before {
         <td>5인 전원</td>
       </tr>
       <tr>
-        <td>Industry cycle (D-3)</td>
+        <td>산업 cycle (D-3)</td>
         <td>박이사 × 김매니저</td>
         <td>김매니저 + Daniel</td>
         <td>정팀장 + Daniel</td>
@@ -1876,7 +2480,7 @@ ul.editorial li::before {
         <td>5인 전원</td>
       </tr>
       <tr>
-        <td>Group GCP (POSCO/SK/LG)</td>
+        <td>그룹 GCP (POSCO/SK/LG)</td>
         <td>박이사 × 김매니저</td>
         <td>Daniel + 정팀장</td>
         <td>정팀장 + 박이사</td>
@@ -1892,7 +2496,7 @@ ul.editorial li::before {
         <td>5인 전원</td>
       </tr>
       <tr>
-        <td>Macroeconomic (금리 / FX)</td>
+        <td>매크로 (금리 · 환율)</td>
         <td>박이사 × 은실장</td>
         <td>김매니저 + 정팀장</td>
         <td>정팀장 + Daniel</td>
@@ -1902,86 +2506,406 @@ ul.editorial li::before {
     </tbody>
   </table>
 
-  <h3 class="subsection"><span class="num">VII‧D</span>Quarterly Review — 5-Step Checklist</h3>
-  <p>
-    Stage 7 module이 ★ 본 checklist 자동화.
-    ★ 2026년 6월 실행 결과: ★ 5명 Watch list + 3개 HIGH-priority alert 자동 식별.
-  </p>
+  <h4>Round 1의 Anti-Anchor 매커니즘 — 실제 적용 case</h4>
+  <div class="narrative">
+    <p>
+      D-2 시나리오 (POSCO 강등)를 예로 들어 Round 1의 anti-anchor가 어떻게 작동하는지를 본다.
+      박이사는 K-ICS frame과 만기보유 전제하에 POSCO Holdings BBB+ 강등 직후의 매입을 검토한다 —
+      BBB+ 등급의 K-ICS 위험계수는 8%이며, sub-track ③ Captive Hybrid의 안정성과 모기업
+      POSCO Holdings의 자본 buffer를 고려하면 만기보유 전략에서 hold-to-maturity 매입은 가능하다.
+    </p>
+    <p>
+      반면 은실장은 LCR · 30일 frame에서 같은 발행자를 본다 — 등급 변동성이 큰 발행자는
+      LCR 산정 시 high-quality liquid asset (HQLA) 분류에서 제외될 risk가 있으며,
+      30일 stress test 기준 spread widening risk가 추가 30-50bp 예상되는 발행자는
+      treasury 포지션 보유 자체가 부담이다. 같은 사실 (POSCO Holdings BBB+ 강등)에서
+      박이사는 매수 시그널, 은실장은 매도/회피 시그널을 정확히 도출한다.
+    </p>
+    <p>
+      이 정반대의 결론이 Round 1에서 명시화될 때, Round 2-4의 다른 페르소나
+      (김매니저 · Daniel · 정팀장)는 한쪽 극에 수렴하지 않고 자체 frame에서 분석을 진행한다.
+      Round 5의 5-축 매트릭스에서 양 극의 자연스러운 수렴 지점이 도출되며, 그 수렴 지점이
+      분석가의 최종 결론이 된다.
+    </p>
+  </div>
 
-  <div class="timeline">
-    <div class="timeline-item actual">
-      <div class="timeline-date">STEP 1 ‧ 등급 변동 INVENTORY</div>
-      <div class="timeline-title">28-발행자 데이터베이스 refresh</div>
-      <div class="timeline-body">
-        ★ 각 발행자의 S&P / Moody's / Fitch 상태 검증.
-        ★ Outlook revision (Negative/Positive) 식별. ★ 확정 변동 발생 시
-        Stage 4 ISSUER_DATABASE 갱신.
-        <br><em class="gold">Watch list (2026.06): LG Chem · LGES · SK Innovation · POSCO Holdings · POSCO 본체</em>
-      </div>
-    </div>
-    <div class="timeline-item actual">
-      <div class="timeline-date">STEP 2 ‧ 시나리오 확률 REVIEW</div>
-      <div class="timeline-title">7개 sub-scenario 재가중</div>
-      <div class="timeline-body">
-        D-1 (sov) 0% — 안정. D-2 Base (POSCO Moody's 동조 강등) 65%.
-        D-3 Base (Samsung Stable revision) 50%. ★ Materialised catalyst 발생 시
-        SCENARIO_STATES 갱신.
-      </div>
-    </div>
-    <div class="timeline-item actual">
-      <div class="timeline-date">STEP 3 ‧ STAGE 3 라이브러리 UPDATE</div>
-      <div class="timeline-title">산업별 갱신 권장</div>
-      <div class="timeline-body">
-        ★ 라이브러리별 가이드, ★ Stage 3-G의 진행 중인 cutoff 정밀화 포함.
-      </div>
-    </div>
-    <div class="timeline-item actual">
-      <div class="timeline-date">STEP 4 ‧ BACKTEST 추가 CASE</div>
-      <div class="timeline-title">4개 candidate case 도출</div>
-      <div class="timeline-body">
-        C9 Samsung Stable revision · C10 POSCO Moody's 동조 강등
-        (★ 양쪽 HIGH) · C11 Hyundai Glovis · C12 대우건설 (★ 양쪽 MEDIUM).
-      </div>
-    </div>
-    <div class="timeline-item forward">
-      <div class="timeline-date">STEP 5 ‧ FRAMEWORK GAP LOG</div>
-      <div class="timeline-title">5개 잔여 gap 추적</div>
-      <div class="timeline-body">
-        ★ 2개 구조적 사용자-의존 gap 포함 (★ Real-world execution 검증 + 사용자 working convention 추가 명시).
+  <h4>5-축 Framework — Round 5 표준 양식</h4>
+  <table class="data">
+    <caption>Round 5 — 5축 합의/비합의 매트릭스 표준 양식</caption>
+    <thead>
+      <tr>
+        <th>축</th>
+        <th>박이사</th>
+        <th>김매니저</th>
+        <th>Daniel</th>
+        <th>정팀장</th>
+        <th>은실장</th>
+        <th>판정</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>① 시간</strong></td>
+        <td>장기 (만기 보유)</td>
+        <td>중기 (6-12개월)</td>
+        <td>단기 (3-6개월)</td>
+        <td>중장기 (조달)</td>
+        <td>단기 (30일)</td>
+        <td><span style="color: var(--accent-green); font-weight: 600;">합의 가능</span></td>
+      </tr>
+      <tr>
+        <td><strong>② 자금</strong></td>
+        <td>KRW + FX hedge</td>
+        <td>Fund-currency</td>
+        <td>USD direct</td>
+        <td>다통화 다변화</td>
+        <td>KRW+hedge vs USD</td>
+        <td><span style="color: var(--crimson); font-weight: 600;">비합의</span></td>
+      </tr>
+      <tr>
+        <td><strong>③ 포지션</strong></td>
+        <td>Overweight 상위</td>
+        <td>Active alpha</td>
+        <td>Primary new issue</td>
+        <td>발행 timing</td>
+        <td>Trading book 회피</td>
+        <td><span style="color: var(--crimson); font-weight: 600;">비합의</span></td>
+      </tr>
+      <tr>
+        <td><strong>④ 벤치마크</strong></td>
+        <td>KRW IG</td>
+        <td>Global IG</td>
+        <td>Asia IG ex-Japan</td>
+        <td>발행사 group peer</td>
+        <td>Local bank treasury</td>
+        <td><span style="color: var(--crimson); font-weight: 600;">비합의</span></td>
+      </tr>
+      <tr>
+        <td><strong>⑤ 공간</strong></td>
+        <td>한국 보험사 portfolio</td>
+        <td>Cross-region rotate</td>
+        <td>홍콩 · 싱가포르</td>
+        <td>발행사 본사</td>
+        <td>국내 시중은행</td>
+        <td><span style="color: var(--crimson); font-weight: 600;">비합의</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout insight">
+    <div class="callout-label">시뮬레이션 가치 평가 기준</div>
+    <p>
+      5축 중 4축에서 비합의가 유지될 경우 시뮬레이션 가치는 극대화된다.
+      모든 축에서 합의에 도달하는 경우는 토픽의 자명함을 의미하며, 분석 가치가 낮다.
+      반대로 시간 축까지 비합의에 도달하면 시뮬레이션 진행 자체가 어렵다 —
+      이 경우 토픽의 재정의가 적절하다.
+    </p>
+  </div>
+
+  <!-- ============================================
+       VII-D. Quarterly Review with procedures
+       ============================================ -->
+  <h3 class="subsection"><span class="num">VII‧D</span>Quarterly Review — 분기말 점검 Procedure</h3>
+  <div class="narrative">
+    <p>
+      매분기말 (3월 · 6월 · 9월 · 12월) 점검은 framework 자체의 self-consistency를 유지하기 위한
+      필수 절차다. 본 procedure는 Stage 7 자동화 module (Python 465줄)이 5개 step 모두를
+      자동 실행할 수 있도록 표준화되어 있으며, 분석가의 수동 작업은
+      Step 1과 Step 5의 판단 부분에 한정된다.
+    </p>
+    <p>
+      이하는 각 step별 procedure를 source 활용 · 점검 결과 정리 형식 · 갱신 trigger의
+      관점에서 정리한 매뉴얼이다. 점검 결과는 Quarterly Review log로 separate file에 저장하며,
+      framework gap 발견 시 다음 버전 (v3.7 등)의 갱신 inventory로 직결된다.
+    </p>
+  </div>
+
+  <div class="procedure">
+    <div class="procedure-num">I</div>
+    <div class="procedure-content">
+      <h4>등급 변동 Inventory</h4>
+      <p>
+        28-issuer 데이터베이스 (Stage 4 ISSUER_DATABASE)의 모든 발행자에 대해
+        S&P · Moody's · Fitch의 현재 등급 + outlook을 확인한다.
+        분기 내에 발생한 등급 변동 · outlook revision · CreditWatch 등재를 모두 식별한다.
+      </p>
+      <p>
+        Watch list (Negative outlook · CreditWatch Negative 보유 발행자)는 별도로 정리하며,
+        6월 시점 기준 LG Chem · LGES · SK Innovation · POSCO Holdings · POSCO 본체 5개 발행자가 포함된다.
+      </p>
+      <div class="source-list">
+        <strong>SOURCE</strong> · Bloomberg RTGS function · S&P Capital IQ · Moody's RatingDirect · 한국 신평사 3사 (NICE · KIS · Korea Ratings) 공식 발표 · KCIF · KP 발행 사항 추적
       </div>
     </div>
   </div>
 
-  <h3 class="subsection"><span class="num">VII‧E</span>Semi-Annual Forum — 12-Slide PPT 양식</h3>
-  <p>
-    Forum deliverable은 ★ 사용자의 3-bullet + 2-chart slide layout을 ★ 상속,
-    ★ Footer "Korean Paper · N". ★ 이하 양식은 ★ Stage 3-G 건설을 ★ 별도 슬라이드로 포함.
+  <div class="procedure">
+    <div class="procedure-num">II</div>
+    <div class="procedure-content">
+      <h4>Stage 5 시나리오 확률 갱신</h4>
+      <p>
+        D-1 (sov 강등) · D-2 (POSCO 강등 + Moody's 동조) · D-3 (반도체 cycle + Samsung Stable revision)
+        7개 sub-scenario의 현재 확률을 재산정한다. 분기 내 발생한 새로운 정보 — 영업이익률 trajectory,
+        재무지표 변동, 관련 발행사 발표 — 를 모두 반영한다.
+      </p>
+      <p>
+        확률 변동이 ±10%p 이상 발생한 시나리오는 별도 분석 메모로 정리하여 다음 월간 리포트에 활용한다.
+        시나리오의 실제 발생 시 확률은 0% 또는 100%로 변동되며, dashboard HTML 갱신이 필요하다.
+      </p>
+      <div class="source-list">
+        <strong>SOURCE</strong> · Stage 5 D-1/D-2/D-3 시뮬레이터 코드 · 발행자별 최근 분기 실적 · catalyst 일자 매트릭스
+      </div>
+    </div>
+  </div>
+
+  <div class="procedure">
+    <div class="procedure-num">III</div>
+    <div class="procedure-content">
+      <h4>Stage 3 산업 라이브러리 갱신</h4>
+      <p>
+        7개 산업 라이브러리 (금융 · GRE · 석유화학 · 자동차 · 반도체 · 철강 · 건설) 각각에 대해
+        신규 등급 변동 case · KIS Mapping Grid cutoff 정확도 · Sub-track 분포 변동을 점검한다.
+        특히 건설 (Stage 3-G)은 정량 cutoff가 KCC건설 · POSCO E&C 사례를 통한 역추론으로 도출되어 있어
+        새로운 발행자 사례 출현 시 정밀화 필요성이 가장 높다.
+      </p>
+      <div class="source-list">
+        <strong>SOURCE</strong> · 한국기업평가 · NICE 신용평가 · Korea Ratings · KIS 평가 매뉴얼 · 6개 상장 건설사 분기 실적 · Stage 3-G v2 검증값
+      </div>
+    </div>
+  </div>
+
+  <div class="procedure">
+    <div class="procedure-num">IV</div>
+    <div class="procedure-content">
+      <h4>Backtest 추가 Case 후보</h4>
+      <p>
+        분기 내 발생한 등급 변동 중 Stage 6 backtest case로 추가 가능한 후보를 식별한다.
+        현 시점 후보 4개는 C9 Samsung Stable revision · C10 POSCO Moody's 동조 강등 (양쪽 HIGH 우선순위) ·
+        C11 Hyundai Glovis · C12 대우건설 (양쪽 MEDIUM)이다.
+        Catalyst가 실제 발생할 경우 자동 trigger되며, framework 정확도 metric의 갱신이 진행된다.
+      </p>
+      <p>
+        Backtest 추가 시 framework component별 정확도가 어떻게 변동하는지의 점검이 적절하다.
+        특히 conditional logic (S&P leading · Fallen Angel)의 정확도 변동이 결정적이다.
+      </p>
+      <div class="source-list">
+        <strong>SOURCE</strong> · Stage 6 backtest 코드 · 실제 발생 등급 변동 timeline · 산업별 lead time 매트릭스
+      </div>
+    </div>
+  </div>
+
+  <div class="procedure">
+    <div class="procedure-num">V</div>
+    <div class="procedure-content">
+      <h4>Framework Gap Log · 다음 버전 갱신 Inventory</h4>
+      <p>
+        분기 내 발견된 새로운 framework gap · 신규 매커니즘 · 정량 trigger의 정밀화 요구를 logging한다.
+        v3.6 기준 잔여 gap 5개 중 2개 (Gap 2 real-world execution 검증 · Gap 5 사용자 working convention 추가 detail)는
+        구조적으로 사용자 의존 영역이며, 실제 활용 후의 feedback이 갱신의 trigger다.
+      </p>
+      <p>
+        다만 본 step의 결과는 다음 버전 (v3.7 · v4.0)의 갱신 inventory로 직결되며,
+        framework 진화의 단일 source of truth로 작동한다.
+      </p>
+      <div class="source-list">
+        <strong>SOURCE</strong> · 본 분기 발견 신규 case · 사용자 활용 feedback · 외부 발표 · 동료 평가 ·  실무 활용 경험
+      </div>
+    </div>
+  </div>
+
+  <p class="pullquote">
+    매분기말 5-step 점검은 framework의 정확도를 유지하기 위한 기계적 절차가 아니라,
+    <em>분석가 본인의 working knowledge 자체</em>를 정직하게 점검하는 자기 평가 절차다.
   </p>
-  <table class="data">
-    <caption>Semi-annual forum PPT — 12-slide 구조</caption>
-    <thead>
-      <tr>
-        <th class="num">#</th>
-        <th>슬라이드 주제</th>
-        <th>3 bullets</th>
-        <th>2 charts</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td class="num">1</td><td>표지 + 목차</td><td>(4-section 구성)</td><td>—</td></tr>
-      <tr><td class="num">2</td><td>지난 반기 retrospect</td><td>핵심 등급 변동 3개</td><td>KP spread 6개월 trajectory</td></tr>
-      <tr><td class="num">3</td><td>금융</td><td>KDB / 시중은행 / 보험</td><td>KDB-시중은행 spread differential</td></tr>
-      <tr><td class="num">4</td><td>GRE</td><td>KEPCO / KOGAS / KHNP</td><td>GRE T1 vs T2 spread</td></tr>
-      <tr><td class="num">5</td><td>반도체</td><td>HBM4 · BBB+ · Para 50</td><td>Samsung-SK Hynix spread gap</td></tr>
-      <tr><td class="num">6</td><td>철강</td><td>POSCO 4-subsidiary</td><td>Holdings-International gap</td></tr>
-      <tr><td class="num">7</td><td>자동차</td><td>Hyundai 3사 동시</td><td>Hyundai-POSCO 비교</td></tr>
-      <tr><td class="num">8</td><td>석유화학</td><td>LG · SK이노 fallen angel</td><td>석유화학 BBB tier 분포</td></tr>
-      <tr style="background: rgba(184, 149, 74, 0.06);"><td class="num">9</td><td><strong>건설 (Stage 3-G)</strong></td><td>POSCO E&C 영업손실 · Sub-track ①</td><td>KP 비중 1-2%</td></tr>
-      <tr><td class="num">10</td><td>시나리오 매트릭스 (D-2/D-3)</td><td>동조 강등 · Stable revision</td><td>3-시나리오 확률</td></tr>
-      <tr><td class="num">11</td><td>Forward — 향후 6개월</td><td>12-발행자 monitor</td><td>Stage 6 backtest 정확도</td></tr>
-      <tr><td class="num">12</td><td>결론 + 액션</td><td>선별적 접근 + 상위 그룹 중심</td><td>(선택)</td></tr>
-    </tbody>
-  </table>
+
+  <!-- ============================================
+       VII-E. Forum PPT preview
+       ============================================ -->
+  <h3 class="subsection"><span class="num">VII‧E</span>반기 포럼 PPT — 12-Slide 양식과 작성 Angle</h3>
+  <div class="narrative">
+    <p>
+      반기 포럼 PPT는 6개월간 KP 시장의 핵심 변동 사항을 12-15장 슬라이드에 담는
+      semi-annual deliverable이다. 슬라이드 layout은 3-bullet + 2-chart로 표준화되어 있으며,
+      footer는 "Korean Paper · N"으로 페이지 번호만 표시한다.
+    </p>
+    <p>
+      이하 12개 슬라이드의 표준 구성은 산업별 update (3-9) · 시나리오 매트릭스 (10) ·
+      forward outlook (11) · 결론 (12)의 5-block으로 분할된다.
+      각 산업 슬라이드는 해당 산업의 6개월 retrospect + forward 6개월 prospect를
+      균형 있게 다룬다.
+    </p>
+  </div>
+
+  <div class="slide-grid">
+    <div class="slide-preview">
+      <div class="slide-preview-num">SLIDE 1</div>
+      <div class="slide-preview-title">표지 + 목차</div>
+      <div class="slide-preview-angle">4-section 구성: 산업별 update · 시나리오 매트릭스 · forward outlook · 결론. 부제는 반기의 가장 결정적 단일 catalyst를 포함한다.</div>
+      <div class="slide-preview-meta"><strong>차트</strong> 없음 (커버)</div>
+    </div>
+
+    <div class="slide-preview">
+      <div class="slide-preview-num">SLIDE 2</div>
+      <div class="slide-preview-title">지난 반기 retrospect</div>
+      <div class="slide-preview-angle">반기 내 발생한 핵심 등급 변동 3개의 정량 정리. 6개월간 KP spread trajectory의 변동 요인 분석. 다만 본 슬라이드는 다음 슬라이드들의 토대로만 기능하므로 과도한 정량 나열은 지양한다.</div>
+      <div class="slide-preview-meta"><strong>차트 1</strong> KP spread 6개월 trajectory  · <strong>차트 2</strong> tier별 spread 변동</div>
+    </div>
+
+    <div class="slide-preview">
+      <div class="slide-preview-num">SLIDE 3</div>
+      <div class="slide-preview-title">금융 — GRE T1/T2 + 시중은행</div>
+      <div class="slide-preview-angle">KDB · KEXIM SSA-style vs 시중은행 BCA + LGF + Gov't support의 정량 분해. 보험 (생보 ALM K-ICS 영향) 추가 layer.</div>
+      <div class="slide-preview-meta"><strong>차트 1</strong> KDB-시중은행 spread differential · <strong>차트 2</strong> 금융 4-tier 구조</div>
+    </div>
+
+    <div class="slide-preview">
+      <div class="slide-preview-num">SLIDE 4</div>
+      <div class="slide-preview-title">전력 · 가스 GRE</div>
+      <div class="slide-preview-angle">KEPCO · KOGAS · KHNP 3개사의 sov 동조 매커니즘 입증. BCA의 산업별 차이 (KEPCO baa2 + Gov't +6 vs KOGAS baa3 + Gov't +7).</div>
+      <div class="slide-preview-meta"><strong>차트 1</strong> GRE T1 vs T2 spread · <strong>차트 2</strong> BCA 변동 trajectory</div>
+    </div>
+
+    <div class="slide-preview featured">
+      <div class="slide-preview-num">SLIDE 5</div>
+      <div class="slide-preview-title">반도체 — HBM4 · Para 50</div>
+      <div class="slide-preview-angle">Samsung HBM4 양산 · SK Hynix BBB+ upgrade · Para 50 dynamic 5-stage framework의 통합 분석. 양사의 cycle 내 정반대 등급 방향이 핵심 메시지.</div>
+      <div class="slide-preview-meta"><strong>차트 1</strong> Samsung-SK Hynix spread gap · <strong>차트 2</strong> Para 50 5-stage trajectory</div>
+    </div>
+
+    <div class="slide-preview featured">
+      <div class="slide-preview-num">SLIDE 6</div>
+      <div class="slide-preview-title">철강 — POSCO 4-subsidiary</div>
+      <div class="slide-preview-angle">POSCO Holdings + 본체 (③) · International (①) · E&C (①)의 sub-track 차등. 2026년 3월 강등이 framework의 backtest 98% 정확도 입증 사례.</div>
+      <div class="slide-preview-meta"><strong>차트 1</strong> Holdings-International gap · <strong>차트 2</strong> 4사 timeline</div>
+    </div>
+
+    <div class="slide-preview">
+      <div class="slide-preview-num">SLIDE 7</div>
+      <div class="slide-preview-title">자동차 — Hyundai 3사 동시</div>
+      <div class="slide-preview-angle">2024년 Hyundai Motor · Kia · Mobis의 동시 upgrade와 그 이후의 안정성. Captive Hybrid (Kia · Mobis)와 자체 펀더멘털 (Motor)의 sub-track 차이.</div>
+      <div class="slide-preview-meta"><strong>차트 1</strong> Hyundai-POSCO 비교 · <strong>차트 2</strong> EV cycle 영향</div>
+    </div>
+
+    <div class="slide-preview">
+      <div class="slide-preview-num">SLIDE 8</div>
+      <div class="slide-preview-title">석유화학 — Fallen Angel Watch</div>
+      <div class="slide-preview-angle">LG Chem · LGES의 Baa3 fallen angel watch · SK Innovation의 양방향 split (S&P BBB- IG vs Moody's Ba1 HY). BBB tier 동질화의 가장 진행된 case.</div>
+      <div class="slide-preview-meta"><strong>차트 1</strong> 석유화학 BBB tier 분포 · <strong>차트 2</strong> fallen angel risk timeline</div>
+    </div>
+
+    <div class="slide-preview featured">
+      <div class="slide-preview-num">SLIDE 9</div>
+      <div class="slide-preview-title">건설 (Stage 3-G)</div>
+      <div class="slide-preview-angle">POSCO E&C 영업손실 KRW 5,044억과 한국 신평사 outlook 약화. 6개 상장 건설사 양극화 4-Group 분류. KP 시장 비중 1-2%로 작지만 framework honest application의 입증.</div>
+      <div class="slide-preview-meta"><strong>차트 1</strong> 6개 건설사 영업이익률 분포 · <strong>차트 2</strong> POSCO E&C trajectory</div>
+    </div>
+
+    <div class="slide-preview">
+      <div class="slide-preview-num">SLIDE 10</div>
+      <div class="slide-preview-title">시나리오 매트릭스</div>
+      <div class="slide-preview-angle">D-2 (POSCO Moody's 동조 강등) · D-3 (Samsung Stable revision) 2-시나리오 확률 분포. 5인 페르소나의 5축 합의/비합의 매트릭스 첨부.</div>
+      <div class="slide-preview-meta"><strong>차트 1</strong> 3-시나리오 확률 매트릭스 · <strong>차트 2</strong> 5축 합의 분포</div>
+    </div>
+
+    <div class="slide-preview">
+      <div class="slide-preview-num">SLIDE 11</div>
+      <div class="slide-preview-title">Forward Outlook — 향후 6개월</div>
+      <div class="slide-preview-angle">12-issuer monitor priority list. HIGH priority 3개 (Samsung · POSCO Holdings · POSCO E&C)의 catalyst 시점. Backtest 90.1% 정확도 + lead time 10.1개월의 forward 적용.</div>
+      <div class="slide-preview-meta"><strong>차트 1</strong> 12-issuer priority 매트릭스 · <strong>차트 2</strong> Backtest 정확도</div>
+    </div>
+
+    <div class="slide-preview">
+      <div class="slide-preview-num">SLIDE 12</div>
+      <div class="slide-preview-title">결론 + 액션</div>
+      <div class="slide-preview-angle">선별적 접근 · 상위 그룹과 우량 시중은행 중심 · 조건부 진입. 본 결론 tone은 framework의 standard이며, 다만 본 반기의 결정적 발견을 부제로 추가한다.</div>
+      <div class="slide-preview-meta"><strong>차트</strong> 선택 (3-axis 비교 grid)</div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       VII-F. Framework Usage Guide (신규)
+       ============================================ -->
+  <h3 class="subsection"><span class="num">VII‧F</span>Framework 활용 Cadence — 일별 · 주별 · 분기별</h3>
+  <div class="narrative">
+    <p>
+      Framework은 작성 완료 후 정적 자료가 아니라 매일 사용되는 working surface로 기능할 때
+      가치가 가장 크다. 이하 cadence는 분석가가 일별 · 주별 · 분기별로 framework을
+      어떤 시점에 어떤 깊이로 사용하는지의 권장 빈도를 정리한 것이다.
+      다만 본 cadence는 권장이며, 실제 활용은 개별 working pattern에 따라 조정이 적절하다.
+    </p>
+  </div>
+
+  <h4>일별 — Live Monitoring 1분 Routine</h4>
+  <div class="narrative">
+    <p>
+      매일 1분 monitoring routine은 Tab IV § IV-B의 12-issuer priority list 확인을 의미한다.
+      HIGH priority 3개 (Samsung Moody's Stable revision · POSCO Moody's 동조 강등 · POSCO E&C 한국 등급 강등) 중
+      당일 catalyst 발생 가능성이 있는 발행자의 뉴스를 확인한다.
+      Bloomberg RTGS function 또는 회사 내부 모니터링 시스템 활용이 적절하다.
+    </p>
+    <p>
+      Catalyst 발생 확인 시 즉시 framework HTML의 시나리오 확률 갱신이 필요하다 (Tab V 시나리오).
+      실제 발생한 catalyst는 확률 0% 또는 100%로 즉시 변동되며, 다음 분기말 Quarterly Review 이전이라도
+      HTML 재업로드가 적절하다.
+    </p>
+  </div>
+
+  <h4>주별 — Sub-track 분류 점검 + Industry Library Cross-check</h4>
+  <div class="narrative">
+    <p>
+      매주 1회 (Friday 권장) 28-issuer DB의 Sub-track 분류와 산업 라이브러리의 정량 trigger 차이를 점검한다.
+      분류 변동 가능성 있는 발행자 — 특히 fallen angel watch가 있는 LG Chem · LGES · SK Innovation —
+      의 최근 분기 실적이 framework의 trigger threshold에 어느 정도 근접했는지를 본다.
+    </p>
+    <p>
+      주별 점검의 결과는 그 주의 KP 월간 리포트 작성 angle에 직접 반영된다.
+      Trigger threshold에 근접한 발행자가 있을 경우 다음 월간 리포트의 키워드 선정에 활용한다.
+    </p>
+  </div>
+
+  <h4>월별 — KP 월간 리포트 작성</h4>
+  <div class="narrative">
+    <p>
+      매월 초 (1-5일) KP 월간 리포트 작성 시 framework의 가장 깊은 활용이 이루어진다.
+      Tab VII § VII-A의 12개월 캘린더에서 해당 월의 추천 키워드를 확인하고,
+      § VII-B의 4-step paragraph flow 표준을 적용한다.
+      필요시 5-페르소나 시뮬레이션 (§ VII-C)을 추가로 진행하여 결론의 robustness를 점검한다.
+    </p>
+    <p>
+      작성 완료 후 본인 리포트의 4-step paragraph flow 준수 여부를 다시 점검하는 것이 적절하다.
+      Step ③의 "다만 / 그러나" qualifier가 모든 단락에 포함되어 있는지 · Step ④의 sentence ending이
+      "...로 보는 것이 적절하다"의 표준 형식에 부합하는지의 self-check가 결정적이다.
+    </p>
+  </div>
+
+  <h4>분기별 — Quarterly Review 5-Step Procedure</h4>
+  <div class="narrative">
+    <p>
+      매분기말 (3월 30일 · 6월 30일 · 9월 30일 · 12월 30일) § VII-D의 5-step procedure를 진행한다.
+      Stage 7 자동화 module의 Python 실행 (약 1-2분)으로 step 1, 2, 4의 정량 정리는 자동화되며,
+      Step 3와 Step 5의 판단 부분은 분석가의 수동 진행이 필요하다.
+    </p>
+    <p>
+      Quarterly Review의 결과는 별도 log file에 저장하며, framework gap 발견 시 다음 버전 (v3.7 · v4.0)의
+      갱신 inventory로 직결된다. 또한 분기 내 발생한 catalyst의 실제 결과 (예상 vs 실제)는
+      backtest case에 추가되어 framework의 정확도 metric을 갱신한다.
+    </p>
+  </div>
+
+  <h4>반기별 — Forum PPT 작성</h4>
+  <div class="narrative">
+    <p>
+      매년 1월과 7월 (반기 종료 직후) § VII-E의 12-slide PPT 표준 양식에 따라 반기 포럼 자료를 작성한다.
+      슬라이드 1-12의 표준 구성은 산업별 update + 시나리오 매트릭스 + forward outlook + 결론의
+      5-block 구조이며, 약 5-7 영업일의 작성 시간이 적절하다.
+    </p>
+    <p>
+      Forum 발표 후 청중 (foreign accounts · 발행사 · 운용역)의 feedback은
+      framework의 working convention 정밀화 (v3.5 gap 5 영역)의 trigger다.
+      특히 외부 발표를 통해 발견되는 새로운 분석 angle이 다음 반기의 framework 진화를 결정한다.
+    </p>
+  </div>
+
 </main>
 
 <!-- ============================================
@@ -1989,7 +2913,7 @@ ul.editorial li::before {
      ============================================ -->
 <footer class="footer">
   <div class="colophon">
-    2026년 6월 작성 — 하나증권 글로벌 자산 리서치 (Hana Securities · Global Asset Research)
+    2026년 6월 작성 — Global Asset Research
   </div>
   <div>
     산출물 52개 ‧ 총 31,927줄 ‧ 매트릭스 v3.6 ‧ Framework 90.1% / 97.2% / Gap 3 of 5
